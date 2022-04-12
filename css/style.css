@@ -51,8 +51,8 @@ header img {
   height: 100%;
   position: fixed;
   background-color: var(--fond1);
-  -webkit-animation: loader 2s both;
-          animation: loader 2s both;
+  -webkit-animation: loader 3s both;
+          animation: loader 3s both;
   z-index: -9999;
   opacity: 0;
 }

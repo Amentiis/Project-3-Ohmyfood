@@ -71,7 +71,7 @@ header{
 .menu h1{
     padding-top: 50px;
     font-family: "Shrikhand", "sans-serif";
-    font-size: 35px;
+    font-size: 32px;
     font-weight: 300;
     
 }
@@ -80,6 +80,8 @@ header{
 .menu h2{
     font-weight: 300;
     position: relative;
+    display: flex;
+    justify-content: flex-start;
     
 }
 
@@ -394,4 +396,35 @@ footer{
             -o-transform:  rotate(360deg);
     }
   }
+
+
+  @media(min-width: 1300px){
+
+    header img {
+        width: 30%;
+        padding: 20px;
+    }
+
+    .menu__container{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .menu h1{
+        display: flex;
+        justify-content: center;
+        font-size: 35px;
+    }
+
+    .menu-list {
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        padding: 0px 10px 0 10px;
+    }
+
+
+
+  
+}
 

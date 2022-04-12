@@ -232,11 +232,7 @@ header img{
 }
 
 
-.menu button{
-    border: 0;
-    background-color: unset;
-    color: white;
-}
+
 
 .button-menu{
     background: rgb(255,121,218);
@@ -252,6 +248,9 @@ header img{
     transition: all 200ms ease;
     width: 300px;
     margin: 50px auto;
+    border: 0;
+    background-color: unset;
+    color: white;
 }
 
 .button-menu:hover{

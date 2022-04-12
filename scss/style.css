@@ -38,121 +38,6 @@ header img {
   padding: 20px;
 }
 
-.main {
-  position: relative;
-}
-
-.loader {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  background-color: var(--fond1);
-  -webkit-animation: loader 2s both;
-          animation: loader 2s both;
-  z-index: -9999;
-  opacity: 0;
-}
-.loader h2 {
-  font-family: "Shrikhand", "sans-serif";
-  background: linear-gradient(342deg, rgb(160, 88, 245) 0%, rgb(255, 135, 222) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 60px;
-  padding: 5px;
-}
-
-@-webkit-keyframes loader {
-  0% {
-    opacity: 1;
-    z-index: 9999;
-  }
-  70% {
-    opacity: 1;
-    z-index: 9999;
-  }
-  99% {
-    z-index: 9999;
-  }
-  100% {
-    opacity: 0;
-    z-index: -9999;
-  }
-}
-
-@keyframes loader {
-  0% {
-    opacity: 1;
-    z-index: 9999;
-  }
-  70% {
-    opacity: 1;
-    z-index: 9999;
-  }
-  99% {
-    z-index: 9999;
-  }
-  100% {
-    opacity: 0;
-    z-index: -9999;
-  }
-}
-.lds-ring {
-  display: inline-block;
-  position: relative;
-  width: 80px;
-  height: 80px;
-}
-
-.lds-ring div {
-  box-sizing: border-box;
-  display: block;
-  position: absolute;
-  width: 64px;
-  height: 64px;
-  margin: 8px;
-  border: 8px solid var(--Primaire);
-  border-radius: 50%;
-  -webkit-animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-          animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  border-color: var(--Primaire) transparent transparent transparent;
-}
-
-.lds-ring div:nth-child(1) {
-  -webkit-animation-delay: -0.45s;
-          animation-delay: -0.45s;
-}
-
-.lds-ring div:nth-child(2) {
-  -webkit-animation-delay: -0.3s;
-          animation-delay: -0.3s;
-}
-
-.lds-ring div:nth-child(3) {
-  -webkit-animation-delay: -0.15s;
-          animation-delay: -0.15s;
-}
-
-@-webkit-keyframes lds-ring {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes lds-ring {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 .align {
   text-align: center;
 }
@@ -233,9 +118,6 @@ header img {
   position: relative;
   padding-left: 20px;
 }
-.fonctionnement h2 {
-  padding: 40px;
-}
 
 .fonctionnement-card {
   display: flex;
@@ -263,6 +145,9 @@ header img {
 .fonctionnement-card .card:hover {
   transform: scale(1.005);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.fonctionnement-card h2 {
+  padding: 40px;
 }
 
 .icon-fonctionnement {
@@ -321,6 +206,17 @@ header img {
   height: 220px;
 }
 
+.new {
+  position: absolute;
+  right: 0;
+  background-color: var(--Tertiaire);
+  padding: 10px 20px;
+  margin-right: 20px;
+  border-radius: 5px;
+  color: green;
+  font-weight: 500;
+}
+
 .restaurant-card-footer {
   display: flex;
   flex-direction: row;
@@ -377,17 +273,6 @@ header img {
   transform: scale(0);
 }
 
-.new {
-  position: absolute;
-  right: 0;
-  background-color: var(--Tertiaire);
-  padding: 10px 20px;
-  margin-right: 20px;
-  border-radius: 5px;
-  color: green;
-  font-weight: 500;
-}
-
 footer {
   display: flex;
   flex-direction: column;
@@ -397,7 +282,7 @@ footer {
   height: 260px;
 }
 
-.nav__link {
+.nav-link {
   display: flex;
   flex-direction: row;
   padding: 10px;
@@ -405,14 +290,14 @@ footer {
   font-weight: 400;
   transition: all 200ms ease;
 }
-.nav__link:hover {
+.nav-link:hover {
   color: var(--Primaire);
 }
-.nav__link .icon1 {
+.nav-link .icon1 {
   margin-right: 20px;
   width: 16px;
 }
-.nav__link .icon2 {
+.nav-link .icon2 {
   margin-right: 20px;
   width: 16px;
 }
@@ -438,13 +323,15 @@ footer {
     flex-direction: row;
     justify-content: space-evenly;
   }
-  .fonctionnement-card span {
-    left: -11px;
-  }
+
   .fonctionnement .card {
     width: 30%;
     padding: 5px;
     box-shadow: rgba(50, 50, 93, 0) 0px 5px 20px 0px, rgba(0, 0, 0, 0.3) -1px 5px 30px -10px;
+  }
+
+  .fonctionnement-card span {
+    left: -11px;
   }
 
   .restaurant__container {

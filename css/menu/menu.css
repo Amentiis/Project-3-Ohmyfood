@@ -231,11 +231,11 @@ button {
   position: absolute;
 }
 .icon-heart-solid {
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background: linear-gradient(342deg, rgb(160, 88, 245) 0%, rgb(255, 135, 222) 65%);
   transform: scale(0);
   transition: all 300ms ease;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .icon-heart-regular {
   transform: scale(1);

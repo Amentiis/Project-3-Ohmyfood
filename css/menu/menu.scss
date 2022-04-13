@@ -1,47 +1,110 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+
+/************************************
+*             Général               *
+************************************/
+
 *{
     
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
 
-:root{
-    --Primaire: #9356DC;
-    --Secondaire : #FF79DA ;
-    --Tertiaire :  #99E2D0;
-    --fond1 : #EAEAEA; 
-    --fond2 : #F6F6F6;
-    --grisclaire : #7E7E7E;
-    --footer : #353535;
-  }
-    /* font-family: "Shrikhand", "sans-serif"; */
-
 a{
     text-decoration: none;
     color: inherit;
 }
-
 body{
     margin: 0;
     padding: 0;
 }
+.main{
+    
+    position: relative;
+}
+
+    // Variable
+    $Primaire: #9356DC;
+    $Secondaire : #FF79DA ;
+    $Tertiaire :  #99E2D0;
+    $fond1 : #EAEAEA; 
+    $fond2 : #F6F6F6;
+    $grisclaire : #7E7E7E;
+    $footer : #353535;
+  
+    // Font titre Shrikhand
+
+
+/************************************
+*              Mixin                *
+************************************/
+
+    @mixin Flex_row { 
+        display: flex;
+        flex-direction: row;
+    }
+
+    @mixin Flex_column { 
+        display: flex;
+        flex-direction: column;
+    }
+
+    @mixin Justify_align {
+        justify-content: center;
+        align-items: center;  
+    }
+
+    @mixin Text_transparent {
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+
+    // ANIMATION
+
+    @mixin Slide_up_0 {
+        transform: translateY(100px);
+        -webkit-transform:  translateY(100px);     
+        -ms-transform: translateY(100px);
+        -webkit-transform: translateY(100px);
+        -moz-transform: translateY(100px);
+        -o-transform: translateY(100px);   
+    }
+    @mixin Slide_up_100 {   
+        transform: translateY(0);
+        -webkit-transform:  translateY(0);     
+        -ms-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -o-transform: translateY(0);
+        opacity: 1;
+    }
+    @mixin Rotate_0 {
+        transform: rotate(0);
+        -webkit-transform:  rotate(0);   
+        -ms-transform: rotate(0);
+        -webkit-transform: rotate(0);
+        -moz-transform: rotate(0);
+        -o-transform: rotate(0); 
+    }
+    @mixin Rotate_100 {
+        transform: rotate(360deg);
+        -webkit-transform:   rotate(360deg);  
+        -ms-transform:  rotate(360deg);
+        -webkit-transform:  rotate(360deg);
+        -moz-transform:  rotate(360deg);
+        -o-transform:  rotate(360deg);
+    }
 
 header{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    @include Flex_row();
+    @include Justify_align();
     position: relative;
-    align-items: center;
-            
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;       
 }
 
-.main{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
 
 .image img{
     width : 302px;
@@ -52,7 +115,7 @@ header{
 }
 
 .menu{
-    background-color: var(--fond1);
+    background-color: $fond1;
     border-radius: 65px 65px 0px 0px;
     margin-top: -6rem;
     position: relative;
@@ -61,19 +124,18 @@ header{
         padding-top: 50px;
         font-family: "Shrikhand", "sans-serif";
         font-size: 32px;
-        font-weight: 300;
-        
+        font-weight: 300; 
     }
     h2{
-        font-weight: 300;
-        position: relative;
-        display: flex;
+        @include Flex_row();
         justify-content: flex-start;
+        position: relative;
+        font-weight: 300;
         &::after{
             content: "";
             width: 60px;
             height: 4px;
-            background-color: var(--Tertiaire);
+            background-color: $Tertiaire;
             color: red;
             position: absolute;
             bottom: -6px;
@@ -84,17 +146,15 @@ header{
 }
 
 .menu-list{
-   display: flex;
-   flex-direction: column;
+    @include Flex_column();
 }
 
 .menu-card{
-    display: flex;
-    flex-direction: row;
+    @include Flex_row();
     justify-content: space-between;
-    background-color: var(--fond2);
     margin-bottom: 20px;
     border-radius: 20px;
+    background-color: $fond2;
     opacity: 0;
     animation: Slide_up 1s both;
     &1{
@@ -110,12 +170,12 @@ header{
         animation-delay: 0.4s
     }
     h3{
-        font-weight: 500;
         margin-bottom: 10px;
+        font-weight: 500;
     }
     &:hover .menuSelector{
-        opacity: 100%;
-        width: 6rem;  
+        width: 6rem;
+        opacity: 100%;       
     }
     &:hover .menuSelector i{
         animation: rotate 0.5s both;
@@ -123,27 +183,22 @@ header{
 }
 
 .menuPrice{
-    display: flex;
-    flex-direction: column;
+    @include Flex_column();
     justify-content: flex-end;
     font-weight: 500;
-    overflow: visible;
-    
+    overflow: visible;   
 }
 
 .menuInfo{
-    display: flex;
-    flex-direction: row;
+    @include Flex_row();
     justify-content: space-between;
     flex: 1;
     padding: 1rem;
     overflow: hidden;
-    max-width: 100%;
-    
+    max-width: 100%; 
 }
 .menuText{
-    display: flex;
-    flex-direction: column;
+    @include Flex_column();
     justify-content: space-between;
     white-space: nowrap;  
     overflow: hidden;
@@ -155,27 +210,24 @@ header{
 }
 
 .menuSelector{
-    background-color: var(--Tertiaire);
+    @include Flex_row();
+    @include Justify_align();
+    position: relative;
     width: 0;
     opacity: 0;
     transform: translateZ(0);
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border-radius: 0px 20px 20px 0px;
+    background-color: $Tertiaire;
     transition: transform 0.4s ease-in-out, width 0.4s ease-in-out, opacity 0.4s ease-in-out;
     i{
         color: white;
         font-size: 35px;
-        cursor: pointer;
-        
-    }
-    
+        cursor: pointer;  
+    } 
 }
 
 .arrow-link{
-    position:  absolute;
+    position: absolute;
     left: 0;
     padding: 20px;
     i{
@@ -194,21 +246,18 @@ header img{
 }
 
 .button-menu{
-    background: rgb(255,121,218);
-    background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
-    border: 0;
-    border-radius: 100px;
-    font-size: 30px;
-    padding: 20px 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    transition: all 200ms ease;
+    @include Flex_row();
+    @include Justify_align();
     width: 300px;
     margin: 50px auto;
     border: 0;
+    border-radius: 100px;
     background-color: unset;
+    background: rgb(255,121,218);
+    background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+    font-size: 30px;
+    padding: 20px 20px;
+    transition: all 200ms ease;
     color: white;
 }
 
@@ -228,21 +277,18 @@ button{
     outline: none;
 }
 
-
 .bold{
     font-weight: bold;
 }
-
 
 .icon-heart{
     font-size: 35px;
     position: absolute;
     &-solid{
-        transition: all 300ms ease;
+        @include Text_transparent();
         background: linear-gradient(342deg, rgba(160,88,245,1) 0%, rgba(255,135,222,1) 65%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
         transform: scale(0);
+        transition: all 300ms ease;
     }  
     &-regular{
         transform: scale(1);
@@ -265,9 +311,8 @@ button{
 
 
 footer{
-    display: flex;
-    flex-direction: column;
-    background-color: var(--footer);
+    @include Flex_column();
+    background-color: $footer;
     color: white;
     padding-left: 50px;
     height: 260px;
@@ -276,14 +321,13 @@ footer{
 
 
 .nav-link{
-    display: flex;
-    flex-direction: row;
-    padding: 10px;
+   @include Flex_row();
     align-items: center;
+    padding: 10px;
     font-weight: 400;
     transition: all 200ms ease;
     &:hover{
-        color : var(--Primaire)
+        color: $Primaire;
     }
     .icon1{ 
         margin-right:14px;
@@ -302,45 +346,23 @@ footer{
 
 @keyframes Slide_up{
     0%{
-        transform: translateY(100px);
-        -webkit-transform:  translateY(100px);     
-        -ms-transform: translateY(100px);
-        -webkit-transform: translateY(100px);
-        -moz-transform: translateY(100px);
-        -o-transform: translateY(100px);
+        @include Slide_up_0()
     }
 
     100%{
-        transform: translateY(0);
-        -webkit-transform:  translateY(0);     
-        -ms-transform: translateY(0);
-        -webkit-transform: translateY(0);
-        -moz-transform: translateY(0);
-        -o-transform: translateY(0);
-        opacity: 1;
+        @include Slide_up_100()
     }
 }
 
 
 @keyframes rotate {
     0% {
-            transform: rotate(0);
-            -webkit-transform:  rotate(0);   
-            -ms-transform: rotate(0);
-            -webkit-transform: rotate(0);
-            -moz-transform: rotate(0);
-            -o-transform: rotate(0);
+        @include Rotate_0();
     }
     100% {
-            transform: rotate(360deg);
-            -webkit-transform:   rotate(360deg);  
-            -ms-transform:  rotate(360deg);
-            -webkit-transform:  rotate(360deg);
-            -moz-transform:  rotate(360deg);
-            -o-transform:  rotate(360deg);
+        @include Rotate_100();
     }
   }
-
 
   @media(min-width: 1300px){
 
@@ -350,20 +372,20 @@ footer{
     }
 
     .menu__container{
-        display: flex;
-        justify-content: space-around;
+        @include Flex_row();
+        width: 100%;
+        justify-content: center;
     }
 
     .menu h1{
-        display: flex;
+        @include Flex_row();
         justify-content: center;
         font-size: 35px;
     }
 
     .menu-list {
-        display: flex;
-        flex-direction: column;
-        width: 500px;
+       @include Flex_column();
+        width: 34%;
         padding: 0px 10px 0 10px;
     }
 }

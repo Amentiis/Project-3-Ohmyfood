@@ -1,23 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+/************************************
+*             Général               *
+************************************/
+
+
 *{
     
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
-
-:root{
-    --Primaire: #9356DC;
-    --Secondaire : #FF79DA ;
-    --Tertiaire :  #99E2D0;
-    --fond1 : #EAEAEA; 
-    --fond2 : #F6F6F6;
-    --grisclaire : #7E7E7E;
-    --footer : #353535;
-  }
-
-    /* font-family: "Shrikhand", "sans-serif"; */
-
 
 
 a{
@@ -31,44 +24,75 @@ body{
     padding: 0;
 }
 
-
-
-header{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    position: relative;
-
-    img{
-        width: 60%;
-        padding: 20px;
-    }
-            
-}
-
 .main{
     position: relative;
 }
 
-.loader{
-    display: flex;
-    flex-direction: column;
+
+
+    // Variable
+    $Primaire: #9356DC;
+    $Secondaire : #FF79DA ;
+    $Tertiaire :  #99E2D0;
+    $fond1 : #EAEAEA; 
+    $fond2 : #F6F6F6;
+    $grisclaire : #7E7E7E;
+    $footer : #353535;
+  
+    // Font titre Shrikhand
+
+
+/************************************
+*              Mixin                *
+************************************/
+
+    @mixin Flex_row { 
+        display: flex;
+        flex-direction: row;
+    }
+
+    @mixin Flex_column { 
+        display: flex;
+        flex-direction: column;
+    }
+
+    @mixin Justify_align {
+        justify-content: center;
+        align-items: center;  
+    }
+
+    @mixin Text_transparent {
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+
+header{
+    @include Flex_row();
     justify-content: center;
-    align-items: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    position: relative;
+    img{
+        width: 60%;
+        padding: 20px;
+    }         
+}
+
+.loader{
+    @include Flex_column();
+    @include Justify_align();
     width: 100%;
     height: 100%; 
     position: fixed;
-    background-color: var(--fond1);
+    background-color: $fond1;
     animation: loader 3s both;
     z-index: -9999;
     opacity: 0;
     h2{
         font-family: "Shrikhand", "sans-serif";
-        background: linear-gradient(342deg, rgb(160, 88, 245) 0%, rgb(255, 135, 222) 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
         font-size: 60px;
+        background: linear-gradient(342deg, rgb(160, 88, 245) 0%, rgb(255, 135, 222) 100%);
+        @include Text_transparent();
         padding: 5px; 
     }
 }
@@ -95,34 +119,33 @@ header{
     }
 }
 
-.lds-ring {
+.loader-circle {
     display: inline-block;
     position: relative;
     width: 80px;
     height: 80px;
   }
-  .lds-ring div {
-    box-sizing: border-box;
+  .loader-circle div {
     display: block;
     position: absolute;
     width: 64px;
     height: 64px;
     margin: 8px;
-    border: 8px solid var(--Primaire);
+    border: 8px solid $Primaire;
     border-radius: 50%;
-    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-    border-color: var(--Primaire) transparent transparent transparent;
+    animation: loader-circle 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: $Primaire transparent transparent transparent;
   }
-  .lds-ring div:nth-child(1) {
+  .loader-circle div:nth-child(1) {
     animation-delay: -0.45s;
   }
-  .lds-ring div:nth-child(2) {
+  .loader-circle div:nth-child(2) {
     animation-delay: -0.3s;
   }
-  .lds-ring div:nth-child(3) {
+  .loader-circle div:nth-child(3) {
     animation-delay: -0.15s;
   }
-  @keyframes lds-ring {
+  @keyframes loader-circle {
     0% {
       transform: rotate(0deg);
     }
@@ -140,11 +163,10 @@ header{
 
 
 .city{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--fond1);
+
+    @include Flex_row();
+    @include Justify_align();
+    background-color: $fond1;
     p{
         font-size: 20px;
         margin-left: 20px;
@@ -157,17 +179,14 @@ header{
 
 
 .menu{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--fond2);
+    @include Flex_column();
+    @include Justify_align();
+    background-color: $fond2;
     h2{
         margin-top: 40px;
         font-size: 28px;
     }
     p {
-   
         font-size: 20px;
         margin-top: 0;   
     }
@@ -179,17 +198,15 @@ header{
 }
 
 .button-menu{
-    background: rgb(255,121,218);
-    background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
-    border: 0;
-    border-radius: 100px;
-    font-size: 30px;
+    @include Flex_row();
+    @include Justify_align();
     padding: 20px 20px;
     margin: 20px 0px 20px 0px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    border: 0;
+    border-radius: 100px;
+    background: rgb(255,121,218);
+    background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+    font-size: 30px;
     transition: all 200ms ease;
     &:hover{
         transform: scale(1.035);
@@ -203,20 +220,17 @@ header{
 
 
 .fonctionnement{
-    display: flex;
-    flex-direction: column;
+    @include Flex_column();
     .card{
-        display: flex;
-        flex-direction: row;
+        @include Flex_row();
         align-items: center;
-        background-color: var(--fond1);
+        background-color: $fond1;
         border-radius: 20px;
         margin-bottom: 50px;
         width: 90%;
         transition: all 200ms ease;
         position: relative;
-        padding-left: 20px;
-        
+        padding-left: 20px;   
     }
     h2{
         padding: 40px;
@@ -224,18 +238,15 @@ header{
 }
 
 .fonctionnement-card{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include Flex_column();
+    @include Justify_align();
     p {
         font-weight: bold;
     }
     span{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: var(--Primaire);
+        @include Flex_row();
+        @include Justify_align();
+        background-color: $Primaire;
         border-radius: 50%;
         padding: 12px;
         color: white;
@@ -253,12 +264,12 @@ header{
 
 .icon-fonctionnement{
     padding: 20px;
-    color: var(--grisclaire);
+    color: $grisclaire;
     font-size: 25px;
 }
 
 .purple{
-    color: var(--Primaire);
+    color: $Primaire;
 }
 
 
@@ -268,9 +279,8 @@ header{
 
 
 .restaurant{
-    display: flex;
-    flex-direction: column;
-    background-color: var(--fond2);
+    @include Flex_column();
+    background-color: $fond2;
     &__title{
         margin-left: 30px;
         padding: 20px;
@@ -278,8 +288,7 @@ header{
 }
 
 .restaurant__container__card{
-    display: flex;
-    flex-direction: column;
+    @include Flex_column();
     position: relative;
     margin-bottom: 50px;
     transition: all 200ms ease;
@@ -297,10 +306,10 @@ header{
 }
 
 .restaurant-card-header{
+    @include Flex_row();
+    position: relative;
     width: 100%;
     object-fit: cover;
-    display: flex;
-    position: relative;
     border-radius: 20px 20px 0px 0px;
     img{
         width: 100%;
@@ -313,8 +322,7 @@ header{
 
 
 .restaurant-card-footer{
-    display: flex;
-    flex-direction: row;
+    @include Flex_row();
     justify-content: space-between;
     align-items: center;
     background-color: white;
@@ -329,7 +337,6 @@ header{
 
 }
 
-
 .restaurant-card-footer-left p,h2{
     margin: 0;
 
@@ -343,8 +350,16 @@ header{
 .icon-heart{
     font-size: 35px;
     position: absolute;
-    
-    
+    &-solid{
+        background: linear-gradient(342deg, rgba(160,88,245,1) 0%, rgba(255,135,222,1) 65%);
+        transform: scale(0);
+        transition: all 300ms ease;
+        @include Text_transparent();
+    }
+    &-regular{
+        transform: scale(1);
+        transition: all 300ms ease;
+    }   
 }
 
 .icoCoeur{
@@ -352,38 +367,19 @@ header{
     right: 55px;
     bottom: 65px;
     margin-right: 20px;
-}
-
-.icon-heart-solid{
-    transition: all 300ms ease;
-    background: linear-gradient(342deg, rgba(160,88,245,1) 0%, rgba(255,135,222,1) 65%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transform: scale(0);
-}
-
-.icon-heart-regular{
-    transform: scale(1);
-    transition: all 300ms ease;
-
-}
-
-
-.icoCoeur:hover .icon-heart-solid{
+    &:hover .icon-heart-solid{
    
-    transform: scale(1);
-   
+        transform: scale(1); 
+    }
+    &:hover .icon-heart-regular{
+        transform: scale(0);
+    }
 }
-
-.icoCoeur:hover .icon-heart-regular{
-    transform: scale(0);
-}
-
 
 .new{
     position: absolute;
     right: 0;
-    background-color: var(--Tertiaire);
+    background-color: $Tertiaire;
     padding: 10px 20px;
     margin-right: 20px;
     border-radius: 5px;
@@ -393,23 +389,21 @@ header{
 
 
 footer{
-    display: flex;
-    flex-direction: column;
-    background-color: var(--footer);
+    @include Flex_column();
+    background-color: $footer;
     color: white;
     padding-left: 50px;
     height: 260px;
 }
 
 .nav__link{
-    display: flex;
-    flex-direction: row;
+    @include Flex_row();
     padding: 10px;
     align-items: center;
     font-weight: 400;
     transition: all 200ms ease;
     &:hover{
-        color : var(--Primaire)
+        color : $Primaire;
     }
     .icon1{ 
         margin-right: 20px;
@@ -438,11 +432,9 @@ footer{
         flex-direction: row;
     }
 
-
     .fonctionnement{
         &-card{
-            display: flex;
-            flex-direction: row;
+            @include Flex_row();
             justify-content: space-evenly;
             span{
                 left: -11px;
@@ -456,20 +448,13 @@ footer{
     }
 
     .restaurant__container{
-        display: flex;
-        flex-direction: row;
+        @include Flex_row();
         flex-wrap: wrap;
         justify-content: space-evenly;
         &__card{
-            width: 45%; 
-           
+            width: 45%;    
         }
     }
-
-
-    
-
-
 }
 
 

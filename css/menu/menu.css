@@ -138,12 +138,15 @@ header {
   flex-direction: row;
   justify-content: space-between;
   flex: 1;
-  padding: 1.5rem;
+  padding: 1rem;
   overflow: hidden;
   max-width: 100%;
 }
 
 .menuText {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   white-space: nowrap;
   overflow: hidden;
 }
@@ -387,5 +390,24 @@ footer {
     flex-direction: column;
     width: 500px;
     padding: 0px 10px 0 10px;
+  }
+}
+@media (max-width: 450px) {
+  .menu {
+    padding: 0px 10px 20px 10px;
+  }
+}
+@media (max-width: 415px) {
+  .menu h1 {
+    font-size: 25px;
+  }
+
+  .icon-heart {
+    font-size: 35px;
+  }
+
+  .icoCoeur {
+    top: 51px;
+    right: 40px;
   }
 }/*# sourceMappingURL=menu.css.map */

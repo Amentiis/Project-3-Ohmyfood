@@ -1,6 +1,9 @@
 /************************************
 *          Fonctionnement           *
 ************************************/
+
+
+
 .fonctionnement{
     @include Flex_column();
     .card{
@@ -46,6 +49,10 @@
     padding: 20px;
     color: $grisclaire;
     font-size: 25px;
+}
+
+.purple{
+    color: $Primaire;
 }
 /************************************
 *          Fonctionnement           *

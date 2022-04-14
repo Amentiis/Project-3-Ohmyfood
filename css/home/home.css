@@ -26,14 +26,6 @@ a {
   color: inherit;
 }
 
-.purple {
-  color: #9356DC;
-}
-
-.bold {
-  font-weight: bold;
-}
-
 .align {
   text-align: center;
 }
@@ -306,6 +298,10 @@ header img {
   padding: 20px;
   color: #7E7E7E;
   font-size: 25px;
+}
+
+.purple {
+  color: #9356DC;
 }
 
 /************************************

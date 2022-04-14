@@ -118,12 +118,7 @@ body{
     position: relative;
 }
 
-header{
-    @include Flex_row();
-    @include Justify_align();
-    position: relative;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;       
-}
+
 
 /************************************
 *             Général               *
@@ -133,6 +128,12 @@ header{
 *              Header              *
 ************************************/
 
+header{
+    @include Flex_row();
+    @include Justify_align();
+    position: relative;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;       
+}
 header .logo{
     width: 60%;
     padding: 20px;
@@ -414,7 +415,7 @@ footer{
 
   @media(min-width: 1300px){
 
-    header img {
+    header .logo {
         width: 30%;
         padding: 20px;
     }

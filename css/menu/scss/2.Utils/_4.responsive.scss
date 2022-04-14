@@ -9,19 +9,19 @@
     }
 
     .menu__container{
-        @include Flex_row();
+        @include flex_row();
         width: 100%;
         justify-content: center;
     }
 
     .menu h1{
-        @include Flex_row();
+        @include flex_row();
         justify-content: center;
         font-size: 35px;
     }
 
     .menu-list {
-       @include Flex_column();
+       @include flex_column();
         width: 34%;
         padding: 0px 10px 0 10px;
     }

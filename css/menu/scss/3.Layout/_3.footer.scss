@@ -3,7 +3,7 @@
 ************************************/
 
 footer{
-    @include Flex_column();
+    @include flex_column();
     background-color: $footer;
     color: white;
     padding-left: 50px;
@@ -11,13 +11,13 @@ footer{
 }
 
 .nav-link{
-   @include Flex_row();
+   @include flex_row();
     align-items: center;
     padding: 10px;
     font-weight: 400;
     transition: all 200ms ease;
     &:hover{
-        color: $Primaire;
+        color: $primaire;
     }
     .icon1{ 
         margin-right:14px;

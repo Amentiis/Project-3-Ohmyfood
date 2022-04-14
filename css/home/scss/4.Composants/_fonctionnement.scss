@@ -5,9 +5,9 @@
 
 
 .fonctionnement{
-    @include Flex_column();
+    @include flex_column();
     .card{
-        @include Flex_row();
+        @include flex_row();
         align-items: center;
         background-color: $fond1;
         border-radius: 20px;
@@ -23,13 +23,13 @@
 }
 
 .fonctionnement-card{
-    @include Flex_column_Justify_align();
+    @include flex_column_justify_align();
     p {
         font-weight: bold;
     }
     span{
-        @include Flex_row_Justify_align();
-        background-color: $Primaire;
+        @include flex_row_justify_align();
+        background-color: $primaire;
         border-radius: 50%;
         padding: 12px;
         color: white;

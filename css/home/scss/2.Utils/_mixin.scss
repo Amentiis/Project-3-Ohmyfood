@@ -1,31 +1,31 @@
 /************************************
 *              Mixin                *
 ************************************/
-@mixin Flex_row { 
+@mixin flex_row { 
     display: flex;
     flex-direction: row;
 }
 
-@mixin Flex_column { 
+@mixin flex_column { 
     display: flex;
     flex-direction: column;
 }
 
-@mixin Flex_row_Justify_align { 
+@mixin flex_row_justify_align { 
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;  
 }
 
-@mixin Flex_column_Justify_align { 
+@mixin flex_column_justify_align { 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;  
 }
 
-@mixin Justify_align {
+@mixin justify_align {
     justify-content: center;
     align-items: center;  
 }

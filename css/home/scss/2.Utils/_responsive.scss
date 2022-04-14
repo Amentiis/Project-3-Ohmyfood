@@ -15,7 +15,7 @@
 
     .fonctionnement{
         &-card{
-            @include Flex_row();
+            @include flex_row();
             justify-content: space-evenly;
             span{
                 left: -11px;
@@ -29,7 +29,7 @@
     }
 
     .restaurant__container{
-        @include Flex_row();
+        @include flex_row();
         flex-wrap: wrap;
         justify-content: space-evenly;
         &__card{

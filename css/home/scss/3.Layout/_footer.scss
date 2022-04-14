@@ -5,7 +5,7 @@
 
 
 footer{
-    @include Flex_column();
+    @include flex_column();
     background-color: $footer;
     color: white;
     padding-left: 50px;
@@ -13,13 +13,13 @@ footer{
 }
 
 .nav__link{
-    @include Flex_row();
+    @include flex_row();
     padding: 10px;
     align-items: center;
     font-weight: 400;
     transition: all 200ms ease;
     &:hover{
-        color : $Primaire;
+        color : $primaire;
     }
     .icon1{ 
         margin-right: 20px;

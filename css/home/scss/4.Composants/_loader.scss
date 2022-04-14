@@ -2,7 +2,7 @@
 *              Loader               *
 ************************************/
 .loader{
-    @include Flex_column_Justify_align();
+    @include flex_column_justify_align();
     width: 100%;
     height: 100%; 
     position: fixed;
@@ -53,7 +53,7 @@
     width: 64px;
     height: 64px;
     margin: 8px;
-    border: 8px solid $Primaire;
+    border: 8px solid $primaire;
     border-radius: 50%;
     animation: loader-circle 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
     border-color: $Primaire transparent transparent transparent;

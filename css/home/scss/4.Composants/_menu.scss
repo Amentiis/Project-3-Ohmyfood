@@ -2,7 +2,7 @@
 *               Menu                *
 ************************************/
 .menu{
-    @include Flex_column_Justify_align();
+    @include flex_column_justify_align();
     background-color: $fond2;
     h2{
         margin-top: 40px;
@@ -20,7 +20,7 @@
 }
 
 .button-menu{
-    @include Flex_row_Justify_align();
+    @include flex_row_justify_align();
     padding: 20px 20px;
     margin: 20px 0px 20px 0px;
     border: 0;

@@ -2,6 +2,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
 /************************************
+*            Variable               *
+************************************/
+/************************************
+*            Variable               *
+************************************/
+/************************************
+*              Mixin                *
+************************************/
+/************************************
+*              Mixin                *
+************************************/
+/************************************
 *             Général               *
 ************************************/
 * {
@@ -14,6 +26,14 @@ a {
   color: inherit;
 }
 
+.align {
+  text-align: center;
+}
+
+.bold {
+  font-weight: bold;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -23,9 +43,6 @@ body {
   position: relative;
 }
 
-/************************************
-*              Mixin                *
-************************************/
 header {
   display: flex;
   flex-direction: row;
@@ -33,6 +50,26 @@ header {
   align-items: center;
   position: relative;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+/************************************
+*             Général               *
+************************************/
+/************************************
+*              Header              *
+************************************/
+header .logo {
+  width: 60%;
+  padding: 20px;
+}
+
+.arrow-link {
+  position: absolute;
+  left: 0;
+  padding: 20px;
+}
+.arrow-link i {
+  font-size: 30px;
 }
 
 .image img {
@@ -44,6 +81,12 @@ header {
   max-height: 30rem;
 }
 
+/************************************
+*              Header              *
+************************************/
+/************************************
+*               Menu                *
+************************************/
 .menu {
   background-color: #EAEAEA;
   border-radius: 65px 65px 0px 0px;
@@ -170,24 +213,6 @@ header {
   cursor: pointer;
 }
 
-.arrow-link {
-  position: absolute;
-  left: 0;
-  padding: 20px;
-}
-.arrow-link i {
-  font-size: 30px;
-}
-
-.align {
-  text-align: center;
-}
-
-header img {
-  width: 60%;
-  padding: 20px;
-}
-
 .button-menu {
   display: flex;
   flex-direction: row;
@@ -222,10 +247,6 @@ button {
   outline: none;
 }
 
-.bold {
-  font-weight: bold;
-}
-
 .icon-heart {
   font-size: 35px;
   position: absolute;
@@ -255,6 +276,12 @@ button {
   transform: scale(0);
 }
 
+/************************************
+*               Menu                *
+************************************/
+/************************************
+*              Footer               *
+************************************/
 footer {
   display: flex;
   flex-direction: column;
@@ -288,6 +315,12 @@ footer {
   font-size: 25px;
 }
 
+/************************************
+*              Footer               *
+************************************/
+/************************************
+*            Animation              *
+************************************/
 @-webkit-keyframes Slide_up {
   0% {
     transform: translateY(100px);
@@ -307,7 +340,6 @@ footer {
     opacity: 1;
   }
 }
-
 @keyframes Slide_up {
   0% {
     transform: translateY(100px);
@@ -363,6 +395,12 @@ footer {
     -o-transform: rotate(360deg);
   }
 }
+/************************************
+*            Animation              *
+************************************/
+/************************************
+*            Responsive             *
+************************************/
 @media (min-width: 1300px) {
   header img {
     width: 30%;
@@ -408,4 +446,7 @@ footer {
     top: 51px;
     right: 40px;
   }
-}/*# sourceMappingURL=menu.css.map */
+}
+/************************************
+*            Responsive             *
+************************************//*# sourceMappingURL=menu.css.map */

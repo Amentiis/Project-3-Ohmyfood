@@ -3,29 +3,8 @@
 
 
 /************************************
-*             Général               *
+*            Variable               *
 ************************************/
-
-*{
-    
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-}
-
-a{
-    text-decoration: none;
-    color: inherit;
-}
-body{
-    margin: 0;
-    padding: 0;
-}
-.main{
-    
-    position: relative;
-}
-
-    // Variable
     $Primaire: #9356DC;
     $Secondaire : #FF79DA ;
     $Tertiaire :  #99E2D0;
@@ -36,6 +15,9 @@ body{
   
     // Font titre Shrikhand
 
+/************************************
+*            Variable               *
+************************************/
 
 /************************************
 *              Mixin                *
@@ -60,7 +42,6 @@ body{
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-
 
     // ANIMATION
 
@@ -98,6 +79,45 @@ body{
         -o-transform:  rotate(360deg);
     }
 
+
+/************************************
+*              Mixin                *
+************************************/
+
+
+/************************************
+*             Général               *
+************************************/
+
+*{
+    
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.align{
+    text-align: center;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    
+    position: relative;
+}
+
 header{
     @include Flex_row();
     @include Justify_align();
@@ -105,7 +125,26 @@ header{
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;       
 }
 
+/************************************
+*             Général               *
+************************************/
 
+/************************************
+*              Header              *
+************************************/
+
+header .logo{
+    width: 60%;
+    padding: 20px;
+}
+.arrow-link{
+    position: absolute;
+    left: 0;
+    padding: 20px;
+    i{
+        font-size: 30px;
+      }
+}
 .image img{
     width : 302px;
     height : 378px;
@@ -113,7 +152,13 @@ header{
     object-fit: cover; 
     max-height: 30rem;
 }
+/************************************
+*              Header              *
+************************************/
 
+/************************************
+*               Menu                *
+************************************/
 .menu{
     background-color: $fond1;
     border-radius: 65px 65px 0px 0px;
@@ -226,25 +271,6 @@ header{
     } 
 }
 
-.arrow-link{
-    position: absolute;
-    left: 0;
-    padding: 20px;
-    i{
-        font-size: 30px;
-      }
-}
-
-
-.align{
-    text-align: center;
-}
-
-header img{
-    width: 60%;
-    padding: 20px;
-}
-
 .button-menu{
     @include Flex_row();
     @include Justify_align();
@@ -277,9 +303,8 @@ button{
     outline: none;
 }
 
-.bold{
-    font-weight: bold;
-}
+
+// COEUR
 
 .icon-heart{
     font-size: 35px;
@@ -310,6 +335,14 @@ button{
 }
 
 
+/************************************
+*               Menu                *
+************************************/
+
+/************************************
+*              Footer               *
+************************************/
+
 footer{
     @include Flex_column();
     background-color: $footer;
@@ -317,8 +350,6 @@ footer{
     padding-left: 50px;
     height: 260px;
 }
-
-
 
 .nav-link{
    @include Flex_row();
@@ -343,6 +374,14 @@ footer{
     font-size: 25px;
 }
 
+/************************************
+*              Footer               *
+************************************/
+
+
+/************************************
+*            Animation              *
+************************************/
 
 @keyframes Slide_up{
     0%{
@@ -363,6 +402,15 @@ footer{
         @include Rotate_100();
     }
   }
+
+
+/************************************
+*            Animation              *
+************************************/
+
+/************************************
+*            Responsive             *
+************************************/
 
   @media(min-width: 1300px){
 
@@ -412,4 +460,8 @@ footer{
     }
     
 }
+
+/************************************
+*            Responsive             *
+************************************/
 

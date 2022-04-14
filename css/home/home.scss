@@ -2,20 +2,93 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
 
 /************************************
-*             Général               *
+*            Variable               *
+************************************/
+
+$Primaire: #9356DC;
+$Secondaire : #FF79DA ;
+$Tertiaire :  #99E2D0;
+$fond1 : #EAEAEA; 
+$fond2 : #F6F6F6;
+$grisclaire : #7E7E7E;
+$footer : #353535;
+
+// Font titre Shrikhand
+
+/************************************
+*            Variable               *
 ************************************/
 
 
+/************************************
+*              Mixin                *
+************************************/
+
+@mixin Flex_row { 
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin Flex_column { 
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin Flex_row_Justify_align { 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;  
+}
+
+@mixin Flex_column_Justify_align { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+}
+
+@mixin Justify_align {
+    justify-content: center;
+    align-items: center;  
+}
+
+@mixin Text_transparent {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/************************************
+*              Mixin                *
+************************************/
+
+
+/************************************
+*             Général               *
+************************************/
 *{
     
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
 
-
 a{
     text-decoration: none;
     color: inherit;
+}
+
+.purple{
+    color: $Primaire;
+}
+
+
+.bold{
+    font-weight: bold;
+}
+
+
+.align{
+    text-align: center;
 }
 
 
@@ -23,49 +96,6 @@ body{
     margin: 0;
     padding: 0;
 }
-
-.main{
-    position: relative;
-}
-
-
-
-    // Variable
-    $Primaire: #9356DC;
-    $Secondaire : #FF79DA ;
-    $Tertiaire :  #99E2D0;
-    $fond1 : #EAEAEA; 
-    $fond2 : #F6F6F6;
-    $grisclaire : #7E7E7E;
-    $footer : #353535;
-  
-    // Font titre Shrikhand
-
-
-/************************************
-*              Mixin                *
-************************************/
-
-    @mixin Flex_row { 
-        display: flex;
-        flex-direction: row;
-    }
-
-    @mixin Flex_column { 
-        display: flex;
-        flex-direction: column;
-    }
-
-    @mixin Justify_align {
-        justify-content: center;
-        align-items: center;  
-    }
-
-    @mixin Text_transparent {
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
 
 header{
     @include Flex_row();
@@ -78,9 +108,20 @@ header{
     }         
 }
 
+.main{
+    position: relative;
+}
+/************************************
+*             Général               *
+************************************/
+
+
+
+/************************************
+*              Loader               *
+************************************/
 .loader{
-    @include Flex_column();
-    @include Justify_align();
+    @include Flex_column_Justify_align();
     width: 100%;
     height: 100%; 
     position: fixed;
@@ -145,6 +186,7 @@ header{
   .loader-circle div:nth-child(3) {
     animation-delay: -0.15s;
   }
+
   @keyframes loader-circle {
     0% {
       transform: rotate(0deg);
@@ -154,18 +196,18 @@ header{
     }
   }
 
+/************************************
+*              Loader               *
+************************************/
 
 
-.align{
-    text-align: center;
-}
-
+/************************************
+*               City                *
+************************************/
 
 
 .city{
-
-    @include Flex_row();
-    @include Justify_align();
+    @include Flex_row_Justify_align();
     background-color: $fond1;
     p{
         font-size: 20px;
@@ -177,10 +219,16 @@ header{
     font-size: 20px;
 }
 
+/************************************
+*               City                *
+************************************/
+
+/************************************
+*               Menu                *
+************************************/
 
 .menu{
-    @include Flex_column();
-    @include Justify_align();
+    @include Flex_column_Justify_align();
     background-color: $fond2;
     h2{
         margin-top: 40px;
@@ -198,8 +246,7 @@ header{
 }
 
 .button-menu{
-    @include Flex_row();
-    @include Justify_align();
+    @include Flex_row_Justify_align();
     padding: 20px 20px;
     margin: 20px 0px 20px 0px;
     border: 0;
@@ -218,6 +265,14 @@ header{
     font-size: 20px;
 }
 
+/************************************
+*               Menu                *
+************************************/
+
+
+/************************************
+*          Fonctionnement           *
+************************************/
 
 .fonctionnement{
     @include Flex_column();
@@ -238,14 +293,12 @@ header{
 }
 
 .fonctionnement-card{
-    @include Flex_column();
-    @include Justify_align();
+    @include Flex_column_Justify_align();
     p {
         font-weight: bold;
     }
     span{
-        @include Flex_row();
-        @include Justify_align();
+        @include Flex_row_Justify_align();
         background-color: $Primaire;
         border-radius: 50%;
         padding: 12px;
@@ -268,14 +321,14 @@ header{
     font-size: 25px;
 }
 
-.purple{
-    color: $Primaire;
-}
+/************************************
+*          Fonctionnement           *
+************************************/
 
 
-.bold{
-    font-weight: bold;
-}
+/************************************
+*            Restaurant             *
+************************************/
 
 
 .restaurant{
@@ -346,6 +399,17 @@ header{
     margin-top: 10px;
 }
 
+.new{
+    position: absolute;
+    right: 0;
+    background-color: $Tertiaire;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border-radius: 5px;
+    color: green;
+    font-weight: 500;
+}
+
 
 .icon-heart{
     font-size: 35px;
@@ -376,16 +440,14 @@ header{
     }
 }
 
-.new{
-    position: absolute;
-    right: 0;
-    background-color: $Tertiaire;
-    padding: 10px 20px;
-    margin-right: 20px;
-    border-radius: 5px;
-    color: green;
-    font-weight: 500;
-}
+
+/************************************
+*            Restaurant             *
+************************************/
+
+/************************************
+*             Footer               *
+************************************/
 
 
 footer{
@@ -414,13 +476,19 @@ footer{
         width: 16px; 
     }
 }
-
-
 .footerTitle{
     font-family: "Shrikhand", "sans-serif";
     font-weight: 300;
     font-size: 25px;
 }
+
+/************************************
+*             Footer               *
+************************************/
+
+/************************************
+*            Responsive             *
+************************************/
 
 @media(min-width: 1300px){
     header img {
@@ -456,6 +524,10 @@ footer{
         }
     }
 }
+
+/************************************
+*            Responsive             *
+************************************/
 
 
 

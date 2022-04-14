@@ -2,6 +2,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
 /************************************
+*            Variable               *
+************************************/
+/************************************
+*            Variable               *
+************************************/
+/************************************
+*              Mixin                *
+************************************/
+/************************************
+*              Mixin                *
+************************************/
+/************************************
 *             Général               *
 ************************************/
 * {
@@ -14,18 +26,23 @@ a {
   color: inherit;
 }
 
+.purple {
+  color: #9356DC;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.align {
+  text-align: center;
+}
+
 body {
   margin: 0;
   padding: 0;
 }
 
-.main {
-  position: relative;
-}
-
-/************************************
-*              Mixin                *
-************************************/
 header {
   display: flex;
   flex-direction: row;
@@ -38,6 +55,16 @@ header img {
   padding: 20px;
 }
 
+.main {
+  position: relative;
+}
+
+/************************************
+*             Général               *
+************************************/
+/************************************
+*              Loader               *
+************************************/
 .loader {
   display: flex;
   flex-direction: column;
@@ -148,10 +175,12 @@ header img {
     transform: rotate(360deg);
   }
 }
-.align {
-  text-align: center;
-}
-
+/************************************
+*              Loader               *
+************************************/
+/************************************
+*               City                *
+************************************/
 .city {
   display: flex;
   flex-direction: row;
@@ -168,6 +197,12 @@ header img {
   font-size: 20px;
 }
 
+/************************************
+*               City                *
+************************************/
+/************************************
+*               Menu                *
+************************************/
 .menu {
   display: flex;
   flex-direction: column;
@@ -212,6 +247,12 @@ header img {
   font-size: 20px;
 }
 
+/************************************
+*               Menu                *
+************************************/
+/************************************
+*          Fonctionnement           *
+************************************/
 .fonctionnement {
   display: flex;
   flex-direction: column;
@@ -267,14 +308,12 @@ header img {
   font-size: 25px;
 }
 
-.purple {
-  color: #9356DC;
-}
-
-.bold {
-  font-weight: bold;
-}
-
+/************************************
+*          Fonctionnement           *
+************************************/
+/************************************
+*            Restaurant             *
+************************************/
 .restaurant {
   display: flex;
   flex-direction: column;
@@ -341,6 +380,17 @@ header img {
   margin-top: 10px;
 }
 
+.new {
+  position: absolute;
+  right: 0;
+  background-color: #99E2D0;
+  padding: 10px 20px;
+  margin-right: 20px;
+  border-radius: 5px;
+  color: green;
+  font-weight: 500;
+}
+
 .icon-heart {
   font-size: 35px;
   position: absolute;
@@ -370,17 +420,12 @@ header img {
   transform: scale(0);
 }
 
-.new {
-  position: absolute;
-  right: 0;
-  background-color: #99E2D0;
-  padding: 10px 20px;
-  margin-right: 20px;
-  border-radius: 5px;
-  color: green;
-  font-weight: 500;
-}
-
+/************************************
+*            Restaurant             *
+************************************/
+/************************************
+*             Footer               *
+************************************/
 footer {
   display: flex;
   flex-direction: column;
@@ -416,6 +461,12 @@ footer {
   font-size: 25px;
 }
 
+/************************************
+*             Footer               *
+************************************/
+/************************************
+*            Responsive             *
+************************************/
 @media (min-width: 1300px) {
   header img {
     width: 30%;
@@ -449,4 +500,7 @@ footer {
   .restaurant__container__card {
     width: 45%;
   }
-}/*# sourceMappingURL=home.css.map */
+}
+/************************************
+*            Responsive             *
+************************************//*# sourceMappingURL=home.css.map */

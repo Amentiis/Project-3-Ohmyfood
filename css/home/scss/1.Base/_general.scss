@@ -1,0 +1,41 @@
+/************************************
+*             Général               *
+************************************/
+*{
+    
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.purple{
+    color: $Primaire;
+}
+
+
+.bold{
+    font-weight: bold;
+}
+
+
+.align{
+    text-align: center;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+
+.main{
+    position: relative;
+}
+/************************************
+*             Général               *
+************************************/

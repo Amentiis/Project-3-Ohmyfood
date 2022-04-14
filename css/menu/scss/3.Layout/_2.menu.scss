@@ -1,0 +1,183 @@
+/************************************
+*               Menu                *
+************************************/
+.menu{
+  background-color: $fond1;
+  border-radius: 65px 65px 0px 0px;
+  margin-top: -6rem;
+  position: relative;
+  padding: 0px 35px 35px 35px;
+  h1{
+      padding-top: 50px;
+      font-family: "Shrikhand", "sans-serif";
+      font-size: 32px;
+      font-weight: 300; 
+  }
+  h2{
+      @include Flex_row();
+      justify-content: flex-start;
+      position: relative;
+      font-weight: 300;
+      &::after{
+          content: "";
+          width: 60px;
+          height: 4px;
+          background-color: $Tertiaire;
+          color: red;
+          position: absolute;
+          bottom: -6px;
+          left: 3px;
+      }
+      
+  }
+}
+
+.menu-list{
+  @include Flex_column();
+}
+
+.menu-card{
+  @include Flex_row();
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  background-color: $fond2;
+  opacity: 0;
+  animation: Slide_up 1s both;
+  &1{
+      animation-delay: 0.1s;
+  }
+  &2{
+      animation-delay: 0.2s;
+  }
+  &3{
+      animation-delay: 0.3s;
+  }
+  &4{
+      animation-delay: 0.4s
+  }
+  h3{
+      margin-bottom: 10px;
+      font-weight: 500;
+  }
+  &:hover .menuSelector{
+      width: 6rem;
+      opacity: 100%;       
+  }
+  &:hover .menuSelector i{
+      animation: rotate 0.5s both;
+  } 
+}
+
+.menuPrice{
+  @include Flex_column();
+  justify-content: flex-end;
+  font-weight: 500;
+  overflow: visible;   
+}
+
+.menuInfo{
+  @include Flex_row();
+  justify-content: space-between;
+  flex: 1;
+  padding: 1rem;
+  overflow: hidden;
+  max-width: 100%; 
+}
+.menuText{
+  @include Flex_column();
+  justify-content: space-between;
+  white-space: nowrap;  
+  overflow: hidden;
+  h3,p{
+      margin: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;  
+  }
+}
+
+.menuSelector{
+  @include Flex_row();
+  @include Justify_align();
+  position: relative;
+  width: 0;
+  opacity: 0;
+  transform: translateZ(0);
+  border-radius: 0px 20px 20px 0px;
+  background-color: $Tertiaire;
+  transition: transform 0.4s ease-in-out, width 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  i{
+      color: white;
+      font-size: 35px;
+      cursor: pointer;  
+  } 
+}
+
+.button-menu{
+  @include Flex_row();
+  @include Justify_align();
+  width: 300px;
+  margin: 50px auto;
+  border: 0;
+  border-radius: 100px;
+  background-color: unset;
+  background: rgb(255,121,218);
+  background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+  font-size: 30px;
+  padding: 20px 20px;
+  transition: all 200ms ease;
+  color: white;
+}
+
+.button-menu:hover{
+  transform: scale(1.035);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+button{
+  border: 0;
+  background-color: unset;
+  color: white;
+}
+.text-button-menu{
+  font-size: 20px;
+  outline: none;
+}
+
+
+// COEUR
+
+.icon-heart{
+  font-size: 35px;
+  position: absolute;
+  &-solid{
+      background: linear-gradient(342deg, rgba(160,88,245,1) 0%, rgba(255,135,222,1) 65%);
+      transform: scale(0);
+      transition: all 300ms ease;
+      @include Text_transparent();
+  }  
+  &-regular{
+      transform: scale(1);
+      transition: all 300ms ease;
+  }
+}
+
+.icoCoeur{
+  position: absolute;
+  right: 65px;
+  top: 58px;
+  margin-right: 20px;
+  &:hover .icon-heart-solid{
+      transform: scale(1);
+  }
+  &:hover .icon-heart-regular{
+      transform: scale(0);
+  }
+}
+
+
+/************************************
+*               Menu                *
+************************************/
+

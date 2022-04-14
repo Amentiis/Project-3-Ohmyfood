@@ -1,0 +1,43 @@
+
+/************************************
+*            Responsive             *
+************************************/
+
+@media(min-width: 1300px){
+    header img {
+        width: 30%;
+        padding: 20px;
+    }
+
+    .menu{
+        flex-direction: row;
+    }
+
+    .fonctionnement{
+        &-card{
+            @include Flex_row();
+            justify-content: space-evenly;
+            span{
+                left: -11px;
+            }
+        }
+        .card {
+            width: 30%;
+            padding: 5px;
+            box-shadow: rgb(50 50 93 / 0%) 0px 5px 20px 0px, rgb(0 0 0 / 30%) -1px 5px 30px -10px;
+        }
+    }
+
+    .restaurant__container{
+        @include Flex_row();
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        &__card{
+            width: 45%;    
+        }
+    }
+}
+
+/************************************
+*            Responsive             *
+************************************/

@@ -1,0 +1,32 @@
+/************************************
+*              Header              *
+************************************/
+
+header{
+    @include Flex_row();
+    @include Justify_align();
+    position: relative;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;       
+}
+header .logo{
+    width: 60%;
+    padding: 20px;
+}
+.arrow-link{
+    position: absolute;
+    left: 0;
+    padding: 20px;
+    i{
+        font-size: 30px;
+      }
+}
+.image img{
+    width : 302px;
+    height : 378px;
+    width: 100%;
+    object-fit: cover; 
+    max-height: 30rem;
+}
+/************************************
+*              Header              *
+************************************/

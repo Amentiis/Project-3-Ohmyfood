@@ -1,0 +1,53 @@
+/************************************
+*            Responsive             *
+************************************/
+@media(min-width: 1300px){
+
+    header .logo {
+        width: 30%;
+        padding: 20px;
+    }
+
+    .menu__container{
+        @include Flex_row();
+        width: 100%;
+        justify-content: center;
+    }
+
+    .menu h1{
+        @include Flex_row();
+        justify-content: center;
+        font-size: 35px;
+    }
+
+    .menu-list {
+       @include Flex_column();
+        width: 34%;
+        padding: 0px 10px 0 10px;
+    }
+}
+
+@media(max-width: 450px){
+    .menu {
+        padding: 0px 10px 20px 10px;
+    }
+}
+
+@media(max-width: 415px){
+    .menu h1 {
+        font-size: 25px;
+
+    }
+    .icon-heart{
+        font-size: 35px;
+    }
+    .icoCoeur {
+        top: 51px;
+        right: 40px;
+
+    }
+    
+}
+/************************************
+*            Responsive             *
+************************************/

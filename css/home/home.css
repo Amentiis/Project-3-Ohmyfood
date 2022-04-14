@@ -43,6 +43,16 @@ body {
   padding: 0;
 }
 
+.main {
+  position: relative;
+}
+
+/************************************
+*             Général               *
+************************************/
+/************************************
+*               Header              *
+************************************/
 header {
   display: flex;
   flex-direction: row;
@@ -55,12 +65,24 @@ header img {
   padding: 20px;
 }
 
-.main {
-  position: relative;
+.city {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #EAEAEA;
+}
+.city p {
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+.icon-map {
+  font-size: 20px;
 }
 
 /************************************
-*             Général               *
+*               Header              *
 ************************************/
 /************************************
 *              Loader               *
@@ -177,28 +199,6 @@ header img {
 }
 /************************************
 *              Loader               *
-************************************/
-/************************************
-*               City                *
-************************************/
-.city {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  background-color: #EAEAEA;
-}
-.city p {
-  font-size: 20px;
-  margin-left: 20px;
-}
-
-.icon-map {
-  font-size: 20px;
-}
-
-/************************************
-*               City                *
 ************************************/
 /************************************
 *               Menu                *

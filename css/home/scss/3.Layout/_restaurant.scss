@@ -1,0 +1,115 @@
+
+/************************************
+*            Restaurant             *
+************************************/
+.restaurant{
+    @include Flex_column();
+    background-color: $fond2;
+    &__title{
+        margin-left: 30px;
+        padding: 20px;
+    }
+}
+
+.restaurant__container__card{
+    @include Flex_column();
+    position: relative;
+    margin-bottom: 50px;
+    transition: all 200ms ease;
+    border-radius: 20px 20px 20px 20px;
+    &:hover{
+        transform: scale(1.010);
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;  
+    }
+}
+
+ 
+.restaurant-card img{
+    border-radius: 20px 20px 0px 0px;
+
+}
+
+.restaurant-card-header{
+    @include Flex_row();
+    position: relative;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+    img{
+        width: 100%;
+        object-fit: cover;
+        height: 220px;
+     
+     }
+
+}
+
+
+.restaurant-card-footer{
+    @include Flex_row();
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 0px 0px 20px 20px;
+    padding: 20px;
+}
+
+
+.restaurant__container{
+    width: 90%;
+    margin: auto;
+
+}
+
+.restaurant-card-footer-left p,h2{
+    margin: 0;
+
+}
+
+.restaurant-card-footer-left p{
+    margin-top: 10px;
+}
+
+.new{
+    position: absolute;
+    right: 0;
+    background-color: $Tertiaire;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border-radius: 5px;
+    color: green;
+    font-weight: 500;
+}
+
+
+.icon-heart{
+    font-size: 35px;
+    position: absolute;
+    &-solid{
+        background: linear-gradient(342deg, rgba(160,88,245,1) 0%, rgba(255,135,222,1) 65%);
+        transform: scale(0);
+        transition: all 300ms ease;
+        @include Text_transparent();
+    }
+    &-regular{
+        transform: scale(1);
+        transition: all 300ms ease;
+    }   
+}
+
+.icoCoeur{
+    position: absolute;
+    right: 55px;
+    bottom: 65px;
+    margin-right: 20px;
+    &:hover .icon-heart-solid{
+   
+        transform: scale(1); 
+    }
+    &:hover .icon-heart-regular{
+        transform: scale(0);
+    }
+}
+/************************************
+*            Restaurant             *
+************************************/

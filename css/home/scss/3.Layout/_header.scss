@@ -1,0 +1,31 @@
+
+/************************************
+*               Header              *
+************************************/
+header{
+    @include Flex_row();
+    justify-content: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    position: relative;
+    img{
+        width: 60%;
+        padding: 20px;
+    }         
+}
+
+
+.city{
+    @include Flex_row_Justify_align();
+    background-color: $fond1;
+    p{
+        font-size: 20px;
+        margin-left: 20px;
+    }
+}
+
+.icon-map{
+    font-size: 20px;
+}
+/************************************
+*               Header              *
+************************************/

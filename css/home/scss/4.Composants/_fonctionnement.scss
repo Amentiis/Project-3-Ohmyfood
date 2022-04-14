@@ -1,0 +1,52 @@
+/************************************
+*          Fonctionnement           *
+************************************/
+.fonctionnement{
+    @include Flex_column();
+    .card{
+        @include Flex_row();
+        align-items: center;
+        background-color: $fond1;
+        border-radius: 20px;
+        margin-bottom: 50px;
+        width: 90%;
+        transition: all 200ms ease;
+        position: relative;
+        padding-left: 20px;   
+    }
+    h2{
+        padding: 40px;
+    }
+}
+
+.fonctionnement-card{
+    @include Flex_column_Justify_align();
+    p {
+        font-weight: bold;
+    }
+    span{
+        @include Flex_row_Justify_align();
+        background-color: $Primaire;
+        border-radius: 50%;
+        padding: 12px;
+        color: white;
+        width: 20px;
+        height: 20px;
+        font-size: 13px;
+        position: absolute;
+        left: -12px;
+    }
+    .card:hover{
+        transform: scale(1.005);
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;   
+    }
+}
+
+.icon-fonctionnement{
+    padding: 20px;
+    color: $grisclaire;
+    font-size: 25px;
+}
+/************************************
+*          Fonctionnement           *
+************************************/

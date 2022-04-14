@@ -1,0 +1,43 @@
+/************************************
+*               Menu                *
+************************************/
+.menu{
+    @include Flex_column_Justify_align();
+    background-color: $fond2;
+    h2{
+        margin-top: 40px;
+        font-size: 28px;
+    }
+    p {
+        font-size: 20px;
+        margin-top: 0;   
+    }
+    button{
+        border: 0;
+        background-color: unset;
+        color: white;
+    } 
+}
+
+.button-menu{
+    @include Flex_row_Justify_align();
+    padding: 20px 20px;
+    margin: 20px 0px 20px 0px;
+    border: 0;
+    border-radius: 100px;
+    background: rgb(255,121,218);
+    background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+    font-size: 30px;
+    transition: all 200ms ease;
+    &:hover{
+        transform: scale(1.035);
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+}
+
+.text-button-menu{
+    font-size: 20px;
+}
+/************************************
+*               Menu                *
+************************************/

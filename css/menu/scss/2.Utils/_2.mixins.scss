@@ -1,0 +1,61 @@
+/************************************
+*              Mixin                *
+************************************/
+@mixin Flex_row { 
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin Flex_column { 
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin Justify_align {
+    justify-content: center;
+    align-items: center;  
+}
+
+@mixin Text_transparent {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+// ANIMATION
+
+@mixin Slide_up_0 {
+    transform: translateY(100px);
+    -webkit-transform:  translateY(100px);     
+    -ms-transform: translateY(100px);
+    -webkit-transform: translateY(100px);
+    -moz-transform: translateY(100px);
+    -o-transform: translateY(100px);   
+}
+@mixin Slide_up_100 {   
+    transform: translateY(0);
+    -webkit-transform:  translateY(0);     
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    opacity: 1;
+}
+@mixin Rotate_0 {
+    transform: rotate(0);
+    -webkit-transform:  rotate(0);   
+    -ms-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0); 
+}
+@mixin Rotate_100 {
+    transform: rotate(360deg);
+    -webkit-transform:   rotate(360deg);  
+    -ms-transform:  rotate(360deg);
+    -webkit-transform:  rotate(360deg);
+    -moz-transform:  rotate(360deg);
+    -o-transform:  rotate(360deg);
+}
+/************************************
+*              Mixin                *
+************************************/

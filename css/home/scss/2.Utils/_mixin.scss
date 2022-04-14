@@ -1,0 +1,39 @@
+/************************************
+*              Mixin                *
+************************************/
+@mixin Flex_row { 
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin Flex_column { 
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin Flex_row_Justify_align { 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;  
+}
+
+@mixin Flex_column_Justify_align { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+}
+
+@mixin Justify_align {
+    justify-content: center;
+    align-items: center;  
+}
+
+@mixin Text_transparent {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/************************************
+*              Mixin                *
+************************************/

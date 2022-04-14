@@ -1,0 +1,41 @@
+
+/************************************
+*             Footer               *
+************************************/
+
+
+footer{
+    @include Flex_column();
+    background-color: $footer;
+    color: white;
+    padding-left: 50px;
+    height: 260px;
+}
+
+.nav__link{
+    @include Flex_row();
+    padding: 10px;
+    align-items: center;
+    font-weight: 400;
+    transition: all 200ms ease;
+    &:hover{
+        color : $Primaire;
+    }
+    .icon1{ 
+        margin-right: 20px;
+        width: 16px;
+    }
+    .icon2{ 
+        margin-right: 20px;
+        width: 16px; 
+    }
+}
+.footerTitle{
+    font-family: "Shrikhand", "sans-serif";
+    font-weight: 300;
+    font-size: 25px;
+}
+
+/************************************
+*             Footer               *
+************************************/

@@ -1,0 +1,38 @@
+/************************************
+*              Footer               *
+************************************/
+
+footer{
+    @include Flex_column();
+    background-color: $footer;
+    color: white;
+    padding-left: 50px;
+    height: 260px;
+}
+
+.nav-link{
+   @include Flex_row();
+    align-items: center;
+    padding: 10px;
+    font-weight: 400;
+    transition: all 200ms ease;
+    &:hover{
+        color: $Primaire;
+    }
+    .icon1{ 
+        margin-right:14px;
+    }
+    .icon2{ 
+        margin-right: 8px;
+    }
+}
+
+.footerTitle{
+    font-family: "Shrikhand", "sans-serif";
+    font-weight: 300;
+    font-size: 25px;
+}
+
+/************************************
+*              Footer               *
+************************************/

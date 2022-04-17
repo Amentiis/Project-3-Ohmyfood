@@ -1,6 +1,20 @@
 /************************************
 *            Responsive             *
 ************************************/
+
+
+
+
+
+@media(min-width: 800px){
+    .arrow-link{
+        i{
+        font-size: 50px;
+        }
+    } 
+}
+
+
 @media(min-width: 1300px){
 
     header .logo {
@@ -25,7 +39,11 @@
         width: 34%;
         padding: 0px 10px 0 10px;
     }
+
+
 }
+
+
 
 @media(max-width: 450px){
     .menu {

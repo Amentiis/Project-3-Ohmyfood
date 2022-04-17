@@ -2,6 +2,8 @@
 *              Header              *
 ************************************/
 
+
+
 header{
     @include flex_row();
     @include justify_align();
@@ -16,10 +18,23 @@ header .logo{
     position: absolute;
     left: 0;
     padding: 20px;
+
     i{
-        font-size: 30px;
-      }
+    font-size: 30px;
+    color: black;
+    transition: all 200ms ease;
+    
+    &:hover{
+        background: linear-gradient(342deg, rgba(160,88,245,1) 0%, rgba(255,135,222,1) 65%);
+        @include Text_transparent();
+        transform: scale(1.20);
+        }
+    }
 }
+
+
+
+
 .image img{
     width : 302px;
     height : 378px;
@@ -27,6 +42,8 @@ header .logo{
     object-fit: cover; 
     max-height: 30rem;
 }
+
+
 /************************************
 *              Header              *
 ************************************/

@@ -146,6 +146,14 @@ header .logo {
 }
 .arrow-link i {
   font-size: 30px;
+  color: black;
+  transition: all 200ms ease;
+}
+.arrow-link i:hover {
+  background: linear-gradient(342deg, rgb(160, 88, 245) 0%, rgb(255, 135, 222) 65%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(1.2);
 }
 
 .image img {
@@ -397,6 +405,11 @@ footer {
 /************************************
 *            Responsive             *
 ************************************/
+@media (min-width: 800px) {
+  .arrow-link i {
+    font-size: 50px;
+  }
+}
 @media (min-width: 1300px) {
   header .logo {
     width: 30%;

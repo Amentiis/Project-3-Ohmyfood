@@ -15,7 +15,7 @@ header{
 
 
 .city{
-    @include flex_row_Justify_align();
+    @include flex_row_justify_align();
     background-color: $fond1;
     p{
         font-size: 20px;

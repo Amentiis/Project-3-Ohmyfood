@@ -2,6 +2,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
 /************************************
+*              Mixin                *
+************************************/
+/************************************
+*              Mixin                *
+************************************/
+/************************************
 *             Général               *
 ************************************/
 * {
@@ -35,12 +41,6 @@ body {
 ************************************/
 /************************************
 *            Variable               *
-************************************/
-/************************************
-*              Mixin                *
-************************************/
-/************************************
-*              Mixin                *
 ************************************/
 /************************************
 *            Animation              *
@@ -235,8 +235,8 @@ header .logo {
   opacity: 100%;
 }
 .menu-card:hover .menuSelector i {
-  -webkit-animation: rotate 0.5s both;
-          animation: rotate 0.5s both;
+  -webkit-animation: rotate 0.8s both;
+          animation: rotate 0.8s both;
 }
 
 .menuPrice {

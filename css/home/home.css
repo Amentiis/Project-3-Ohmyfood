@@ -52,9 +52,16 @@ header {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   position: relative;
 }
-header img {
-  width: 60%;
-  padding: 20px;
+header h1 {
+  font-family: "Shrikhand";
+  font-size: 10vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 0;
+  flex: 1;
 }
 
 .city {
@@ -237,6 +244,7 @@ header img {
 
 .text-button-menu {
   font-size: 20px;
+  color: white;
 }
 
 /************************************
@@ -464,9 +472,8 @@ footer {
 *            Responsive             *
 ************************************/
 @media (min-width: 1300px) {
-  header img {
-    width: 30%;
-    padding: 20px;
+  header h1 {
+    font-size: 5.9vw;
   }
 
   .menu {

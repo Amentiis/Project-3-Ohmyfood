@@ -7,9 +7,16 @@ header{
     justify-content: center;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     position: relative;
-    img{
-        width: 60%;
-        padding: 20px;
+    h1{
+        font-family: "Shrikhand";
+        font-size: 10vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 0;
+        flex: 1;
     }         
 }
 

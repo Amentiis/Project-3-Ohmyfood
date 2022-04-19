@@ -84,6 +84,7 @@
   overflow: hidden;
   max-width: 100%; 
 }
+
 .menuText{
   @include flex_column();
   justify-content: space-between;

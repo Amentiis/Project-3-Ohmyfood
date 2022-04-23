@@ -38,6 +38,29 @@
     }
 }
 
+@media(min-width: 480px){
+    footer {
+        height: 160px;
+        padding: 0;
+        nav{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        h3{
+            text-align: center;
+        }   
+    }
+
+    .footerTitle {
+        
+        font-family: "Shrikhand", "sans-serif";
+        font-weight: 300;
+        font-size: 50px;
+        margin: 0;
+        padding: 10px 0px;
+    }
+}
 /************************************
 *            Responsive             *
 ************************************/
